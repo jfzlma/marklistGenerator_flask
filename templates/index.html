@@ -1,0 +1,173 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<br>
+<div class="container-fluid">
+    <div class="jumbotron jumbotron-fluid">
+        <h class="display-1"> <center>Marklist Generator</center> </h>
+        
+
+    </div>
+    
+    <br>
+    <div class="jumbotron jumbotron-fluid my-jumb">
+        <div class="row">
+            <div class="col-sm-3"> </div>
+            <div class="col-sm-6">
+                <form action="/send" method="POST" name="form">
+                    <div class="row">
+                        <div class="col-sm-4"> <label for="name"> Name </label> </div>
+                        <div class="col-sm-8"> <input type="text" class="form-control" name="name" required> </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-4"><label for="regNum">Register Number</label></div>
+                        <div class="col-sm-8"><input type="text" class="form-control" name="regNum" required></div>
+    
+                    </div>
+                    <br>
+                    <div class="row">
+                            <div class="col-sm-4"><label for="collName">College:</label></div>
+                            <div class="col-sm-8"><input type="text" class="form-control" name="collName" required></div>
+        
+                        </div>
+                        <br>
+                    <div class="row">
+                        <div class="col-sm-4"><label for="sem">Semester</label></div>
+                        <div class="col-sm-8">
+                            <select class="form-control" name="sem" required >
+                                <option>Select Semester</option>
+                                <option value="1">Semseter 1</option>
+                                <option value="2">Semester 2</option>
+                                <option value="3">Semester 3</option>
+                                <option value="4">Semester 4</option>
+                                <option value="5">Semseter 5</option>
+                                <option value="6">Semester 6</option>
+                                <option value="7">Semester 7</option>
+                                <option value="8">Semester 8</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br>
+                   
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-10">
+                                    <label for="sub1"> <p class="h4">Subject 1</p> </label>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-sm-12"><input type="text" name="name1" id="name1" class="form-control" placeholder="Name" required></div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                
+                                <div class="col-sm-12"><input type="text" name="mark1" id="mark1" placeholder="Mark" class="form-control" required></div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                
+                                <div class="col-sm-12"><input type="text" name="total1" id="total1" placeholder="Total Mark" class="form-control" required></div>
+                            </div>
+                            <br>
+
+                        </div>
+                        <div class="col-sm-6">
+
+                                <br>
+                                <div class="row">
+                                    <div class="col-sm-2"></div>
+                                    <div class="col-sm-10">
+                                        <label for="sub2"> <p class="h4">Subject 2</p> </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-sm-12"><input type="text" name="name2" id="name2" class="form-control" placeholder="Name" required></div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    
+                                    <div class="col-sm-12"><input type="text" name="mark2" id="mark2" placeholder="Mark" class="form-control" required></div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    
+                                    <div class="col-sm-12"><input type="text" name="total2" id="total2" placeholder="Total Mark" class="form-control" required></div>
+                                </div>
+                                <br>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                            <div class="col-sm-6">
+                                <br>
+                                <div class="row">
+                                    <div class="col-sm-2"></div>
+                                    <div class="col-sm-10">
+                                        <label for="sub3"> <p class="h4">Subject 3</p> </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-sm-12"><input type="text" name="name3" id="name3" class="form-control" placeholder="Name" required></div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    
+                                    <div class="col-sm-12"><input type="text" name="mark3" id="mark3" placeholder="Mark" class="form-control" required></div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    
+                                    <div class="col-sm-12"><input type="text" name="total3" id="total3" placeholder="Total Mark" class="form-control" required></div>
+                                </div>
+                                <br>
+    
+                            </div>
+                            <div class="col-sm-6">
+    
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-sm-2"></div>
+                                        <div class="col-sm-10">
+                                            <label for="sub4"> <p class="h4">Subject 4</p> </label>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-sm-12"><input type="text" name="name4" id="name4" class="form-control" placeholder="Name" required></div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        
+                                        <div class="col-sm-12"><input type="text" name="mark4" id="mark4" placeholder="Mark" class="form-control" required></div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        
+                                        <div class="col-sm-12"><input type="text" name="total4" id="total4" placeholder="Total Mark" class="form-control" required></div>
+                                    </div>
+                                    <br>
+                            </div>
+                        </div> 
+                        <br>
+                        <div class="row">
+                                <div class="col-sm-4"></div>
+                                <div class="col-sm-6">
+                                    <button class="btn btn-info" type="submit"> Generate </button>
+                                </div>
+                            </div>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

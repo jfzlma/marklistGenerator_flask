@@ -1,0 +1,87 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<br>
+
+
+        <div class="row">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-10">
+                        <div class="jumbotron">
+                                <div class="col-sm-12">
+                                        <div class="row">
+                                            <div class="col-sm-4"><p class="h5">Name : </p></div>
+                                            <div class="col-sm-4"><p class="h5"> {{stuName}}</p></div>
+                                            
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-4"> <p class="h5">Register Number : </p> </div>
+                                            <div class="col-sm-8"><p class="h5"> {{regNum}} </p></div>
+                                        </div>
+                                        <div class="row">
+                                                <div class="col-sm-4"> <p class="h5">College : </p> </div>
+                                                <div class="col-sm-8"><p class="h5"> {{collName}} </p></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-4"><p class="h5">Semester : </p></div>
+                                            <div class="col-sm-8"><p class="h5"> {{sem}} </p></div>
+                                        </div>
+                                     </div>
+                        </div>
+                </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+                <div class="jumbotron" style="margin-top:-25px;">
+
+                    <table class="table table-boredered" style="margin-top:-20px;">
+
+                            <thead>
+                                    <tr>
+                                      <th scope="col">Sl.No</th>
+                                      <th scope="col">Subject</th>
+                                      <th scope="col">Mark</th>
+                                      <th scope="col">Total Mark</th>
+                                      <th scope="col">Grade</th>
+                                    </tr>
+                            </thead>
+                            <tbody>
+                                   {% for i in range(0,3)%}
+                                   <tr>
+                                        <th> {{i+1}} </th>
+                                        <td> {{name[i]}} </td>
+                                        <td> {{mark[i]}} </td>
+                                        <td> {{total[i]}} </td>
+                                        <td> {{gra[i]}} </td>
+                                      </tr>
+
+                                    {% endfor %}
+                                    
+                                    
+
+                            </tbody>
+                            
+                    </table>
+                   <div class="row">
+                      <br>
+                      <br>
+                      <div class="col-sm-10">
+                          <br>
+                           <div class="row" style="margin-left:1px;">
+                                <div class="col-sm-2">  <p class="h5"> Semester Status : </p></div>
+                                 <div class="col-sm-4"> <p class="h5">{{status}} </p></div>
+                           </div>
+                      </div>
+                   </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+{% endblock %}
